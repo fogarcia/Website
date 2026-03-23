@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alien Invasion | Foster Garcia</title>
+    <style>
+      :root {
+        --bg: #f3f3f3;
+        --fg: #111;
+        --muted: #666;
+        --line: #222;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 1.5rem 3.5rem 3rem;
+      }
+
+      .site-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 2.25rem;
+        font-size: 1.05rem;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        margin-bottom: 7rem;
+      }
+
+      .site-nav a:hover,
+      .site-nav a:focus-visible,
+      .back-link:hover,
+      .back-link:focus-visible {
+        opacity: 0.65;
+      }
+
+      .hero-label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--muted);
+        margin: 0 0 1.25rem;
+      }
+
+      .hero-title-row {
+        display: flex;
+        align-items: center;
+        gap: 1.75rem;
+        margin-bottom: 1.5rem;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(3.8rem, 8vw, 7rem);
+        line-height: 0.95;
+        font-weight: 900;
+        letter-spacing: -0.05em;
+      }
+
+      .hero-line {
+        flex: 1;
+        height: 2px;
+        background: var(--line);
+        margin-top: 0.55rem;
+      }
+
+      .hero-description {
+        margin: 0;
+        max-width: 920px;
+        font-size: 1.05rem;
+        line-height: 1.55;
+        color: var(--muted);
+      }
+
+      .hero {
+        margin-bottom: 5.5rem;
+      }
+
+      .content {
+        max-width: 1120px;
+      }
+
+      .section-title {
+        margin: 0 0 1.6rem;
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .project-card {
+        border-left: 3px solid var(--line);
+        padding-left: 1.15rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .project-card h2,
+      .media-title {
+        margin: 0 0 0.8rem;
+        font-size: 1.05rem;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .project-card p,
+      .media-caption,
+      .highlights-list li {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.65;
+        color: var(--muted);
+      }
+
+      .media-block {
+        margin-bottom: 2.5rem;
+      }
+
+      .media-frame {
+        margin-top: 0.9rem;
+      }
+
+      video,
+      img {
+        width: 100%;
+        display: block;
+        background: #ddd;
+      }
+
+      .highlights-list {
+        margin: 0;
+        padding-left: 1.2rem;
+      }
+
+      .highlights-list li + li {
+        margin-top: 0.6rem;
+      }
+
+      .back-link-wrap {
+        margin-top: 3rem;
+      }
+
+      .back-link {
+        font-size: 0.98rem;
+        font-weight: 600;
+        color: var(--muted);
+      }
+
+      footer {
+        margin-top: 4.5rem;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 900px) {
+        .page {
+          padding: 1.25rem 1.5rem 2.5rem;
+        }
+
+        .site-nav {
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          gap: 1rem 1.5rem;
+          margin-bottom: 4rem;
+        }
+
+        .hero-title-row {
+          display: block;
+        }
+
+        .hero-line {
+          margin-top: 1rem;
+          width: 100%;
+        }
+
+        h1 {
+          font-size: 3.4rem;
+        }
+      }
+
+      @media (max-width: 560px) {
+        h1 {
+          font-size: 2.6rem;
+        }
+
+        .hero-description,
+        .project-card p,
+        .media-caption,
+        .highlights-list li {
+          font-size: 0.98rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="site-nav" aria-label="Primary">
+        <a href="../../../index.html">HOME</a>
+        <a href="../../../resume/">RESUME</a>
+        <a href="../../">PROJECTS</a>
+        <a href="../../../highlights/">HIGHLIGHTS</a>
+      </nav>
+
+      <section class="hero">
+        <p class="hero-label">03 / PROJECTS</p>
+        <div class="hero-title-row">
+          <h1>ALIEN INVASION</h1>
+          <div class="hero-line" aria-hidden="true"></div>
+        </div>
+        <p class="hero-description">
+          A Python arcade-style game built with Pygame featuring player movement,
+          shooting mechanics, enemy waves, score tracking, and game-state
+          management.
+        </p>
+      </section>
+
+      <section class="content" aria-label="Alien Invasion details">
+        <h2 class="section-title">Featured Work</h2>
+
+        <article class="project-card">
+          <h2>Gameplay Video</h2>
+          <p class="media-caption">
+            A short gameplay clip showing movement, enemy waves, and shooting.
+          </p>
+          <div class="media-frame">
+            <video controls preload="metadata">
+              <source src="video/gameplay.mov" type="video/quicktime" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h2>Project Screenshot</h2>
+          <p class="media-caption">
+            In-game view of the Alien Invasion project during active play.
+          </p>
+          <div class="media-frame">
+            <img
+              src="images/play-screen.png"
+              alt="Gameplay screenshot from the Alien Invasion project"
+            />
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h2>Highlights</h2>
+          <ul class="highlights-list">
+            <li>Built with Python and Pygame.</li>
+            <li>Includes player movement, shooting, enemies, scoring, and restart flow.</li>
+            <li>Focused on game logic, event handling, and object-oriented design.</li>
+          </ul>
+        </article>
+
+        <div class="back-link-wrap">
+          <a class="back-link" href="../../">&larr; Back to Projects</a>
+        </div>
+      </section>
+
+      <footer>&copy; 2026 Foster Garcia</footer>
+    </main>
+  </body>
+</html>
