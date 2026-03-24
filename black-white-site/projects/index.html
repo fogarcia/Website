@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,7 +49,8 @@
         text-decoration: none;
       }
 
-      .top-nav a:hover {
+      .top-nav a:hover,
+      .top-nav a:focus-visible {
         color: var(--muted);
       }
 
@@ -98,6 +97,14 @@
 
       header > p:first-child {
         color: var(--muted);
+      }
+
+      .section-label {
+        color: var(--muted);
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
       }
 
       .lead {
@@ -172,12 +179,12 @@
       <nav class="top-nav">
         <a href="../">Home</a>
         <a href="../resume/">Resume</a>
-        <a href="../projects/">Projects</a>
+        <a href="./">Projects</a>
         <a href="../highlights/">Highlights</a>
       </nav>
 
       <header>
-        <p>03 / PROJECTS</p>
+        <p class="section-label">03 / PROJECTS</p>
         <h1>Projects</h1>
         <p class="lead">
           A collection of technical projects, labs, and hands-on work.
@@ -199,13 +206,19 @@
           </a>
 
           <article class="project-card">
-            <h3>Project Title</h3>
-            <p>X</p>
+            <h3>Splunk Lab</h3>
+            <p>
+              A hands-on lab exploring the capabilities of Splunk for log analysis and visualization. Includes data ingestion, search queries, and dashboard creation to demonstrate Splunk's powerful features for monitoring and analyzing machine-generated data.
+            </p>
           </article>
 
           <article class="project-card">
-            <h3>Project Title</h3>
-            <p>X</p>
+            <h3>Domain Controller</h3>
+            <p>
+              A simulation of a domain controller managing network authentication and authorization for a local area network. 
+              Used to practice configuring user accounts, group policies, and access controls in a Windows Server environment.
+              Utilizes Proxmox for virtualiztion and PowerShell for scripting and automation of administrative tasks.
+            </p>
           </article>
         </div>
       </section>
